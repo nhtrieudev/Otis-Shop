@@ -1,5 +1,6 @@
 import { useAppDispatch, useAppSelector } from "../../../../redux/hooks/hooks";
 import { removeOrder } from "../../../../redux/reducers/orderReducer";
+import formatter from "../../../format-currency";
 
 function Product() {
   let dispatch = useAppDispatch();
@@ -28,9 +29,12 @@ function Product() {
                 Số lượng: <span className="quantity">{product.quantity}</span>
               </p>
               <p className="order-container__list--item-product-detail-total">
+                {formatter.format(product.price)}
+              </p>
+              <p className="order-container__list--item-product-detail-total">
                 Thành tiền:{" "}
                 <span className="total">
-                  {product.price * product.quantity}₫
+                  {formatter.format(product.price * product.quantity)}
                 </span>
               </p>
             </div>

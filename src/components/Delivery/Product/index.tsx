@@ -1,4 +1,5 @@
 import { useAppSelector } from "../../../redux/hooks/hooks";
+import formatter from "../../format-currency";
 
 function Product() {
   let products = useAppSelector((state) => state.cart.products);
@@ -21,7 +22,7 @@ function Product() {
                 <span className="size">{product.size}</span>
               </div>
               <p className="delivery-summary__list-item--detail-prod-text">
-                Tổng: {product.quantity * product.price}
+                Tổng:  {formatter.format(product.quantity * product.price)}
               </p>
             </div>
             <div className="delivery-summary__list-item--detail-img">

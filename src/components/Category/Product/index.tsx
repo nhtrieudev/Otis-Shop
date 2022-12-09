@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import formatter from "../../format-currency";
 
 function ProductBox(props: any) {
   return (
@@ -15,7 +16,10 @@ function ProductBox(props: any) {
             >
               {product.name}
             </Link>
-            <p className="product-box__content--price">{product.price}₫</p>
+            <p className="product-box__content--price">
+              {" "}
+              {formatter.format(product.price)}
+            </p>
           </div>
         </div>
       ))}

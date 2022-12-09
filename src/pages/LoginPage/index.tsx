@@ -29,8 +29,8 @@ function LoginPage() {
   const handleLoginWithGoogle = () => {
     signInWithPopup(auth, GoogleProvider)
       .then((result) => {
-        toast.success("Đăng nhập thành công...!!");
         navigate("/");
+        toast.success("Đăng nhập thành công...!!");
       })
       .catch((error) => {
         toast.error(error.message);

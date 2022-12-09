@@ -111,6 +111,8 @@
             width: 30%;
             height: 100%;
             margin: 0 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
             animation: show_sidebox 0.5s ease forwards;
             &-order {
                 padding: 10px;

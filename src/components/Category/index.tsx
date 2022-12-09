@@ -89,7 +89,7 @@ function Category(props: any) {
               </li>
             </ul>
           </div>
-          <div className="category-container__menu box">
+          <div className="category-container__menu">
             <h2 className="category-container__menu--heading">Loại sản phẩm</h2>
             <ul className="category-container__menu--list">
               <li

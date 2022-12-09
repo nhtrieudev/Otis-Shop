@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useAppDispatch, useAppSelector } from "../../../redux/hooks/hooks";
 import { addCart } from "../../../redux/reducers/cartReducer";
+import formatter from "../../format-currency";
 
 function Information(props: any) {
   let nodeSize: any = useRef();
@@ -75,9 +76,8 @@ function Information(props: any) {
         <h1 className="product-detail__info--name">{props.name}</h1>
         <div className="product-detail__info--price">
           <span className="product-detail__info--price-number">
-            {props.price}
+            {formatter.format(props.price)}
           </span>
-          <span className="product-detail__info--price-currency">₫</span>
         </div>
         <div className="product-detail__info--colors" ref={nodeColor}>
           {props.colors?.map((color: any, index: any) => (
@@ -126,7 +126,7 @@ function Information(props: any) {
           </button>
         </div>
         <p className="product-detail__info--back">
-          <Link to="/catogry">
+          <Link to="/cateogry">
             <i className="fa-solid fa-hand-point-left"></i>Tiếp tục mua hàng
           </Link>
         </p>

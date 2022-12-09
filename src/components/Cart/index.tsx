@@ -2,6 +2,7 @@ import ProductCart from "./Product";
 import { Link, useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks/hooks";
 import { toast } from "react-toastify";
+import formatter from "../format-currency";
 
 function Cart(props: any) {
   const products = useAppSelector((state) => state.cart.products);
@@ -21,17 +22,18 @@ function Cart(props: any) {
         <h1 className="cart-title">Giỏ hàng của bạn</h1>
         <div className="cart-container">
           <ProductCart />
-          <div className="sidebox box">
+          <div className="sidebox">
             <div className="sidebox-order">
               <h3 className="sidebox-order--heading">Thông tin đơn hàng</h3>
               <div className="sidebox-order--total">
                 <span className="sidebox-order--total-text">Tổng tiền:</span>
                 <span className="sidebox-order--total-price">
-                  {products.reduce(
-                    (a: any, b: any) => a + b.price * b.quantity,
-                    0
+                  {formatter.format(
+                    products.reduce(
+                      (a: any, b: any) => a + b.price * b.quantity,
+                      0
+                    )
                   )}
-                  ₫
                 </span>
               </div>
               <p className="sidebox-order--text">

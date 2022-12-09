@@ -2,7 +2,7 @@ function Introduce() {
   return (
     <>
       <div className="introduce">
-        <div className="box introduce-container">
+        <div className=" introduce-container">
           <h1 className="introduce-container--title">Giới thiệu</h1>
           <div className="introduce-container--heading">About us</div>
           <p className="introduce-container--text">

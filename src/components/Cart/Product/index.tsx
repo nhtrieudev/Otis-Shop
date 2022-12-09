@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../../redux/hooks/hooks";
 import { removeCart } from "../../../redux/reducers/cartReducer";
+import formatter from "../../format-currency";
 
 function ProductCart() {
   let dispatch = useAppDispatch();
@@ -24,10 +25,7 @@ function ProductCart() {
                     {product.name}
                   </Link>
                   <div className="cart-product__list--item-content-detail--price">
-                    {product.price}
-                    <span className="cart-product__list--item-content-detail--price-currency">
-                      ₫
-                    </span>
+                    {formatter.format(product.price)}
                   </div>
                   <div className="cart-product__list--item-content-detail--type">
                     <div
@@ -42,8 +40,7 @@ function ProductCart() {
                   </p>
                   <p className="cart-product__list--item-content-detail--total">
                     Thành tiền:
-                    {product.quantity * product.price}
-                    <span>₫</span>
+                    {formatter.format(product.quantity * product.price)}
                   </p>
                 </div>
                 <div className="cart-product__list--item-content-remove">

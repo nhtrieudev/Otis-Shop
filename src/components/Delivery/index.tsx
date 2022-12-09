@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks/hooks";
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { addOrder } from "../../redux/reducers/orderReducer";
 import Product from "./Product";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { removeAll } from "../../redux/reducers/cartReducer";
+import formatter from "../format-currency";
 
 function Delivery() {
   let ref: any = useRef();
@@ -19,7 +20,40 @@ function Delivery() {
   let [city, setCity] = useState("");
   let [note, setNote] = useState("");
 
-  let handleSubmit = () => {
+  let PHONE_REGEX = new RegExp("/((09|03|07|08|05)+([0-9]{8})\b)/g");
+
+  let handleSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!PHONE_REGEX.test(phone)) {
+      if (fullname.length > 16) {
+        if (street.length > 16) {
+          if (district.length > 1) {
+            if (city.length > 2) {
+              products?.map((product: any) => {
+                dispatch(addOrder(product));
+              });
+              dispatch(removeAll([]));
+              toast.success("Xác nhận thành công");
+              navigate("/user/order");
+            } else {
+              toast.error("Vui lòng điền đầy đủ tên tên thành phố.");
+            }
+          } else {
+            toast.error("Vui lòng điền đầy đủ tên tên quận.");
+          }
+        } else {
+          toast.error("Vui lòng điền đầy đủ tên tên đường.");
+        }
+      } else {
+        toast.error("Vui lòng điền đầy đủ họ tên người nhận.");
+      }
+    } else {
+      toast.error("Số điện thoại sai cú pháp.");
+    }
+  };
+
+  let handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     if (
       fullname === "" ||
       phone === "" ||
@@ -43,7 +77,7 @@ function Delivery() {
       <div className="delivery-container">
         <h1 className="delivery-container-heading">Chi tiết thanh toán</h1>
         <div className="delivery">
-          <form action="" className="box form-info">
+          <form action="" onSubmit={handleSubmitForm} className="box form-info">
             <h2 className="form-info--heading">Địa chỉ giao hàng</h2>
             <div className="form-info__item">
               <label className="form-info__item-name">Tên người nhận :</label>
@@ -102,11 +136,7 @@ function Delivery() {
               />
             </div>
             <div className="form-info-confirm">
-              <button
-                type="submit"
-                onClick={handleSubmit}
-                className="form-info-confirm--btn"
-              >
+              <button type="submit" className="form-info-confirm--btn">
                 Xác nhận
               </button>
             </div>
@@ -116,11 +146,12 @@ function Delivery() {
             <div className="delivery-summary__subtotal">
               <p className="delivery-summary__subtotal-text">Tổng thu :</p>
               <span className="delivery-summary__subtotal-number">
-                {products.reduce(
-                  (a: any, b: any) => a + b.quantity * b.price,
-                  0
+                {formatter.format(
+                  products.reduce(
+                    (a: any, b: any) => a + b.quantity * b.price,
+                    0
+                  )
                 )}
-                đ
               </span>
             </div>
             <ul className="delivery-summary__list">
