@@ -1,0 +1,144 @@
+.delivery-container{
+    padding-top: 110px;
+    width: 100%;
+    &-heading {
+        width: 80%;
+        text-transform: capitalize;
+        margin: 0 auto;
+        font-weight: 500;
+        font-size: 40px;
+        animation: show_down .5s ease forwards;
+    }
+    .delivery {
+        width: 80%;
+        margin: 10px auto;
+        display: flex;
+        .form-info {
+            width: 50%;
+            border: 1px solid #000;
+            animation: show_left 1.5s ease forwards;
+            margin: 10px;
+            &--heading {
+                text-transform: capitalize;
+                font-weight: 400;
+                font-size: 30px;
+                padding: 10px 0;
+            }
+            &__item {
+                margin-top: 16px;
+                &-name {
+                    width: 100%;
+                    font-size: 22px;
+                }
+                &-input {
+                    margin-top: 8px;
+                    font-size: 22px;
+                    padding: 8px;
+                    border-radius: 10px;
+                    width: 100%;
+                }
+            }
+            &-confirm {
+                width: 100%;
+                text-align: center;
+                &--btn {
+                    margin: 20px 0;
+                    padding: 10px 20px;
+                    background-color: $primary--color;
+                    color: #fff;
+                    border: 1px solid $primary--color;
+                    border-radius: 10px;
+                }
+                &--btn:hover {
+                    background-color: #fff;
+                    color: $primary--color;
+                }
+            }
+        }
+        &-summary {
+            width: 50%;
+            border: 1px solid #000;
+            margin: 10px;
+            animation: show_right 1.5s ease forwards;
+            &--heading {
+                text-transform: capitalize;
+                font-weight: 400;
+                padding: 10px 0;
+                font-size: 30px;
+            }
+            &__cart-items {
+                margin: 10px 0;
+                font-size: 22px;
+            }
+            &__subtotal {
+                display: flex;
+                margin: 10px 0;
+                justify-content: space-between;
+                &-text {
+                    font-size: 22px;
+                }
+                &-number {
+                    font-size: 24px;
+                    color: rgb(255, 0, 119);
+                }
+            }
+            
+            &__list {
+                height: 500px;
+                padding: 10px;
+                overflow-y: scroll;
+                &-item {
+                    border: 1px solid #000;
+                    box-shadow: 2px 2px 2px #ccc;
+                    border-radius: 10px;
+                    padding: 10px;
+                    &--name {
+                        font-size: 22px;
+                        text-transform: capitalize;
+                    }
+                    &--detail {
+                        display: flex;
+                        justify-content: space-between;
+                        &-prod {
+
+                            &-text {
+                                display: flex;
+                                font-size: 22px;
+                                .color {
+                                    height: 20px;
+                                    width: 20px;
+                                    border-radius: 50%;
+                                    border: 1px solid #ccc;
+                                    text-transform: capitalize;
+                                }
+                                .devided {
+                                    margin: 0 5px;
+                                }
+                                .size {
+                                    text-transform: uppercase;
+                                }
+                            }
+                        }
+                        &-img {
+                            width: 75px;
+                            height: 75px;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            &__list::-webkit-scrollbar {
+                width: 8px;
+                border-radius: 10px;
+                background-color: #f0f0f0;
+            } 
+            &__list::-webkit-scrollbar-thumb {
+                border-radius: 5px;
+                background-color: #000000;
+            }
+        }
+    }
+}

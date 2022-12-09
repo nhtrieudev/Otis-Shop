@@ -1,0 +1,18 @@
+.banner {
+    padding-top: 100px;
+    width: 100%;
+    animation: show_slider 2s linear forwards;
+    .banner-item {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}
+@keyframes show_slider {
+    from {
+        opacity: 0;
+    }to {
+        opacity: 1;
+    }
+}

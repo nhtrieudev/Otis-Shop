@@ -1,0 +1,22 @@
+.introduce {
+    width: 100%;
+    padding-top: 100px;
+    &-container {
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+        animation: show_left 1.5s ease forwards;
+        &--title {
+            text-align: center;
+        }
+        &--heading {
+            font-size: 24px;
+        }
+        &--text {
+            line-height: 1.6;
+            font-size: 18px;
+            font-weight: 200;
+            margin: 10px 0;
+        }
+    }
+}

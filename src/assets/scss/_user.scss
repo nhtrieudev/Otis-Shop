@@ -1,0 +1,170 @@
+.user {
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 110px;
+    &-container {
+        display: flex;
+        width: 80%;
+        margin: auto;
+        .sidebar {
+            width: 25%;
+            animation: show_left 1.5s ease forwards;
+            margin: 0 10px;
+            height: 100%;
+            &-container {
+                padding: 10px;
+                &--heading {
+                    text-transform: uppercase;
+                }
+                &__list {
+                    padding: 10px;
+                    padding-left: 25px;
+                    &--item {
+                        padding: 10px 0;
+                        font-size: 20px;
+                        list-style: circle;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .home {
+            width: 75%;
+            margin: 0 10px;
+            animation: show_right 1.5s ease forwards;
+            display: flex;
+            min-height: 100px;
+            h1 {
+                align-self: center;
+                padding: 0 20px;
+            }
+        }
+        .profile {
+            width: 75%;
+            margin: 0 10px;
+            animation: show_right 1.5s ease forwards;
+            display: flex;
+            &-container {
+                padding: 10px;
+                &--heading {
+                    margin-bottom: 10px;
+                }
+                &__content {
+                    line-height: 2;
+                    padding-left: 20px;
+                    &--name {
+                        font-size: 24px;
+                    }
+                    &--email {
+                        font-size: 18px;
+                    }
+                    a {
+                        color: blue;
+                        font-size: 16px;
+                        text-decoration: none;
+                    }
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .order {
+            width: 75%;
+            margin: 0 10px;
+            animation: show_right 1.5s ease forwards;
+            &-container {
+                padding: 10px;
+                height: 100%;
+                &--heading {
+                    padding-bottom: 10px;
+                }
+                &__list {
+                    max-height: 300px;
+                    overflow-y: scroll;
+                    &--item {
+                        display: flex;
+                        justify-content: space-between;
+                        list-style: none;
+                        margin: 10px 0;
+                        &-product {
+                            display: flex;
+                            &-thumb {
+                                width: 75px;
+                                height: 100%;
+                                img {
+                                    border-radius: 5px;
+                                    width: 100%;
+                                }
+                            }
+                            &-detail {
+                                margin: 0 20px;
+                                &-name {
+                                    padding-bottom: 5px;
+                                    font-size: 20px;
+                                }
+                                &-type {
+                                    font-size: 18px;
+                                    display: flex;
+                                    padding-bottom: 5px;
+                                    .color {
+                                        height: 18px;
+                                        width: 18px;
+                                        border: 1px solid #ccc;
+                                        border-radius: 50%;
+                                    }
+                                    .devided {
+                                        margin: 0 5px;
+                                    }
+                                }
+                                &-total {
+                                    font-size: 20px;
+                                    span {
+                                        color: red;
+                                    }
+                                }
+                                &-quantity {
+                                    font-size: 20px;
+                                    .quantity {
+                                        margin: 5px 0;
+                                    }
+                                }
+                                
+                            }
+                        }
+                        &-status {
+                            align-self: center;
+                            span {
+                                color: blue;
+                            }
+                        }
+                        &-cancel {
+                            align-self: center;
+                            button {
+                                cursor: pointer;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                background-color: red;
+                                border: 1px solid red;
+                                color: #fff;
+                            }
+                            button:hover {
+                                color: red;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+                &__list::-webkit-scrollbar {
+                    width: 8px;
+                    border-radius: 10px;
+                    background-color: #f0f0f0;;
+                } 
+                &__list::-webkit-scrollbar-thumb {
+                    border-radius: 5px;
+                    background-color: #3d3d3d;
+                }
+            }
+        }
+    }
+}

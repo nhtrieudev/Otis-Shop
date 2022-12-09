@@ -1,0 +1,21 @@
+.contact {
+    width: 100%;
+    padding-top: 100px;
+    &-container {
+        width: 80%;
+        margin: 20px auto;
+        animation: show_right 1.5s ease forwards;
+        &--title {
+            text-align: center;
+        }
+        &--heading {
+            font-size: 24px;
+        }
+        &__list {
+            &--item {
+                list-style: none;
+                margin: 10px 0;
+            }
+        }
+    }
+}

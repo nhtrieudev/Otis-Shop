@@ -1,0 +1,36 @@
+.product-home {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    &-container {
+        width: 100%;
+        &--heading {
+            text-align: center;
+            padding: 20px 0;
+        }
+        &__item {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-bottom: 30px;
+            width: 100%;
+        }
+        &--view-more {
+            width: 100%;
+            text-align: center;
+            .button {
+                padding: 10px 20px;
+                font-size: 18px;
+                color: #fff;
+                box-shadow: 3px 3px 3px #ccc;
+                border: 1px solid $primary--color;
+                background-color: $primary--color;
+                background-image: linear-gradient(#fff, #fff);
+            }
+            .button:hover {
+                color: $primary--color;
+            }
+        }
+    }
+}
