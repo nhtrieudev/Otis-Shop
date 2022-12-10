@@ -14,7 +14,7 @@ function Sidebar() {
   };
   return (
     <>
-      <div className="sidebar box">
+      <div className="sidebar">
         <div className="sidebar-container">
           <h2 className="sidebar-container--heading">Tài khoản</h2>
           <ul className="sidebar-container__list">

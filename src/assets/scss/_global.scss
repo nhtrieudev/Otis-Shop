@@ -6,6 +6,25 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.wrapper {
+    height: 100%;
+}
+
+.button-on-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid aqua;
+    background-color: transparent;
+    i {
+        font-size: 18px;
+        color: aqua;
+    }
+}
+
 .box {
     border: 1px solid #ccc;
     box-shadow: 3px 3px 3px #ccc;
