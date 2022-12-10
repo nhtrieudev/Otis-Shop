@@ -8,7 +8,7 @@
         margin: auto;
         .sidebar {
             width: 25%;
-            animation: show_left 1.5s ease forwards;
+            animation: show_left .5s ease forwards;
             margin: 0 10px;
             height: 100%;
             &-container {
@@ -31,7 +31,7 @@
         .home {
             width: 75%;
             margin: 0 10px;
-            animation: show_right 1.5s ease forwards;
+            animation: show_right .5s ease forwards;
             display: flex;
             min-height: 100px;
             h1 {
@@ -42,7 +42,7 @@
         .profile {
             width: 75%;
             margin: 0 10px;
-            animation: show_right 1.5s ease forwards;
+            animation: show_right .5s ease forwards;
             display: flex;
             &-container {
                 padding: 10px;
@@ -72,7 +72,7 @@
         .order {
             width: 75%;
             margin: 0 10px;
-            animation: show_right 1.5s ease forwards;
+            animation: show_right .5s ease forwards;
             &-container {
                 padding: 10px;
                 height: 100%;

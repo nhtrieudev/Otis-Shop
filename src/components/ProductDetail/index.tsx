@@ -2,6 +2,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { db } from "../../firebase/config";
+import ImageDetail from "./ImageDetail";
 import Information from "./Information";
 
 function ProductDetail() {
@@ -45,16 +46,7 @@ function ProductDetail() {
     <>
       <div className="detail">
         <div className="product-detail">
-          <div className="product-detail__img">
-            <img className="product-detail__img-main" src={img[0]} alt="" />
-            <ul className="product-detail__img-list">
-              {img?.map((img: any, index: any) => (
-                <li className="product-detail__img-list--item" key={index}>
-                  <img src={img} alt="" />
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ImageDetail img={img} />
           <Information
             name={name}
             id={id}

@@ -7,12 +7,12 @@
         &--heading {
             text-align: center;
             padding: 10px 0;
-            animation: show_down 1.5s ease forwards;
+            animation: show_down .5s ease forwards;
             text-transform: uppercase;
         }
         .login-form {
             width: 40%;
-            animation: show_up 1.5s ease forwards;
+            animation: show_up .5s ease forwards;
             margin: 0 auto;
             &__content {
                 text-align: center;

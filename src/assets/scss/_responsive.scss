@@ -154,6 +154,9 @@
             }
         }
     }
+    .button-on-top {
+        display: block;
+    }
 }
 
 @media only screen and (min-width: 551px) and (max-width: 1024px) {
@@ -316,5 +319,8 @@
     .footer {
         &-container  {
         }
+    }
+    .button-on-top {
+        display: block;
     }
 }
