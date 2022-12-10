@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import formatter from "../../format-currency";
 
 function ProductBox(props: any) {
