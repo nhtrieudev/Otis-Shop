@@ -10,7 +10,7 @@ const firebaseConfig = {
   storageBucket: "otis-web-1.appspot.com",
   messagingSenderId: "1099055774486",
   appId: "1:1099055774486:web:5e54d34b216c0b9bf8ee37",
-  measurementId: "G-FSLER9Q47G",
+  measurementId: "G-FSLER9Q47G"
 };
 
 const app = initializeApp(firebaseConfig);
