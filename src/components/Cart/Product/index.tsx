@@ -14,7 +14,7 @@ function ProductCart() {
           {products.map((product: any, index: any) => (
             <li className="cart-product__list--item box" key={index}>
               <div className="cart-product__list--item-img">
-                <img src={product.img} alt="" />
+                <img src={product.img[0]} alt="" />
               </div>
               <div className="cart-product__list--item-content">
                 <div className="cart-product__list--item-content-detail">
