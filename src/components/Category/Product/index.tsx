@@ -8,7 +8,7 @@ function ProductBox(props: any) {
       {props.propProd.map((product: any, index: any) => (
         <div className="product-box" key={index}>
           <div className="product-box__thumb">
-            <img onClick={() => navigate(`/${product.name}`)} src={product.img} alt="" />
+            <img onClick={() => navigate(`/${product.name}`)} src={product.img[0]} alt="" />
           </div>
           <div className="product-box__content">
             <Link
