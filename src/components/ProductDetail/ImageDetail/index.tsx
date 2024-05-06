@@ -11,7 +11,7 @@ function ImageDetail(props: any) {
       <div className="product-detail__img">
         <img
           className="product-detail__img-main"
-          src={img || props.img}
+          src={img || props.img[0]}
           alt=""
         />
         <ul className="product-detail__img-list">
